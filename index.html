@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/global.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <h1 id="hover">Hover at the bottom of the page...</h1>
+       
+        <div id="bottom-bar" class="changeUI">
+            <h1 id="weatherman">Weatherman</h1>
+            <div id="presets">
+                <button id="city">City</button>
+                <button id="desert">Desert</button>
+                <button id="mountains">Mountains</button>
+                <button id="cherry">Cherry</button>
+                <button id="customize">Customize</button>
+            </div>
+            <button id="settings-button"><img id="settings" src="assets/settings.svg"></button>
+            <button id="info-button"><img id="info" src="assets/info-icon.svg"></button>
+        </div> 
+
+        <div id="customize-menu">
+            <div id="drag-bar" class="changeUI">
+                <h2 class="drag-top">World settings</h2>
+                <button class="x">X</button>
+            </div>
+            <div id="foreground">
+                <h2>Foreground</h2>
+                <button class="theme-button" data-type="foreground" data-theme="city">City</button>
+                <button class="theme-button" data-type="foreground" data-theme="desert">Desert</button>
+                <button class="theme-button" data-type="foreground" data-theme="mountain">Mountain</button>
+                <button class="theme-button" data-type="foreground" data-theme="cherry">Cherry</button>
+            </div>
+        
+            <div id="midground">
+                <h2>Midground</h2>
+                <button class="theme-button" data-type="midground" data-theme="city">City</button>
+                <button class="theme-button" data-type="midground" data-theme="desert">Desert</button>
+                <button class="theme-button" data-type="midground" data-theme="mountain">Mountain</button>
+                <button class="theme-button" data-type="midground" data-theme="cherry">Cherry</button>
+            </div>
+        
+            <div id="background">
+                <h2>Background</h2>
+                <button class="theme-button" data-type="background" data-theme="city">City</button>
+                <button class="theme-button" data-type="background" data-theme="desert">Desert</button>
+                <button class="theme-button" data-type="background" data-theme="mountain">Mountain</button>
+                <button class="theme-button" data-type="background" data-theme="cherry">Cherry</button>
+            </div>
+        
+            <div id="sky">
+                <h2>Sky</h2>
+                <button class="theme-button" data-type="sky" data-theme="city">City</button>
+                <button class="theme-button" data-type="sky" data-theme="desert">Desert</button>
+                <button class="theme-button" data-type="sky" data-theme="mountain">Mountain</button>
+                <button class="theme-button" data-type="sky" data-theme="cherry">Cherry</button>
+            </div>
+        
+            <div id="weather">
+            <h2>Weather</h2>
+                <button class="theme-button" data-type="weather" data-theme="city">Rain</button>
+                <button class="theme-button" data-type="weather" data-theme="desert">Sandstorm</button>
+                <button class="theme-button" data-type="weather" data-theme="mountain">Snow</button>
+                <button class="theme-button" data-type="weather" data-theme="cherry">Petals</button>
+                <button id="none">Clear</button>
+            </div>
+        </div>
+        
+        <script src="scripts/city-change.js" async defer></script>
+        <script src="scripts/sketch.js" async defer></script>
+    </body>
+</html>

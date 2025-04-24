@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    height: 100%;
+    width: 100vw;
+    background-size: 25%, 150%, 100%, 150%, 100%;
+    background-repeat: repeat, repeat-x, repeat-x, repeat-x, repeat-x;
+    background-position: bottom;
+    animation: backgroundScroll 60s infinite;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+@keyframes backgroundScroll {
+        0%   {background-position: 0 100%;}
+        50%  {background-position: -400px 100%;}
+        100% {background-position: 0 100%;}
+    }
+
+#customize-menu {
+    display: none;
+    width: 500px;
+    background-color: #C1C5B2;
+}
+
+#weatherman {
+    justify-self: left;
+    margin: 0;
+    margin-left: 1em;
+    grid-column: 1;
+    margin-block: 0;
+    color: white;
+    font-family: "Azeret Mono", monospace;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+#presets {
+    justify-self: center;
+    grid-column: 2;
+}
+
+
+#bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: blueviolet;
+    opacity: .1;
+    display: grid;
+    grid-template-columns: 5fr 5fr 75px 75px;
+    grid-template-rows: 1fr;
+    height: 50px;
+    align-items: center;
+}
+
+#bottom-bar:hover {
+    opacity: 1;
+}
+
+#settings {
+    grid-column: 3;
+    grid-row: 1;
+    border: none;
+    max-width: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(321deg) brightness(104%) contrast(102%);
+}
+
+#settings-button {  
+    background-color: #c1c5b200;
+    max-width: 75px;
+    justify-self: right;
+ }
+
+#info {
+    grid-column: 4;
+    grid-row: 1;
+    max-width: 50px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(321deg) brightness(104%) contrast(102%);
+}
+
+#info-button {  
+    background-color: #c1c5b200;
+    max-width: 75px;
+    justify-self: right;
+ }
+
+#drag-bar {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    background-color: blueviolet;
+    height: 50px;
+}
+
+.drag-top {
+    grid-column: 1;
+    color: white;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: 0.5em;
+    font-family: "Azeret Mono", monospace;
+    font-weight: 300;
+}
+
+.x {
+    grid-column: 2;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-family: "Azeret Mono", monospace;
+    font-weight: 100;
+    font-size: 24px;
+    align-self: center;
+}
+
+#hover {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+#customize-menu.show {
+    display: block;
+    padding-bottom: 1em;
+    box-shadow: 5px 5px 5px black;
+}
+
+
+#background, #foreground, #midground, #weather, #sky {
+    margin: 1em;
+}
+
+
+[data-theme="city"] {
+    background-color: purple;
+    color: white;
+  }
+  
+  /* Target data-theme="desert" */
+  [data-theme="desert"] {
+    background-color: sandybrown;
+  }
+  
+  /* Target data-theme="mountain" */
+  [data-theme="mountain"] {
+    background-color: lightblue;
+  }
+
+  [data-theme="cherry"] {
+    background-color: #F2A8F8;
+  }
